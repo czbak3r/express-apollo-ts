@@ -6,6 +6,7 @@
   "repository": "https://github.com/czbak3r/express-apollo-ts",
   "author": "Charles Baker",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "@types/express": "^4.17.14",
     "@types/node": "^18.11.9",
@@ -15,13 +16,16 @@
   },
   "dependencies": {
     "@apollo/server": "^4.2.1",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "graphql": "^16.6.0",
     "mongoose": "^6.7.3"
   },
   "scripts": {
-    "dev": "nodemon src/main.ts",
-    "compile": "tsc",
-    "start": "yarn run compile; nodemon ./dist/main.ts"
+    "dev": "nodemon ./src/main.ts",
+    "build": "tsc",
+    "start": "nodemon ./dist/main.js"
   }
 }
