@@ -8,10 +8,12 @@ import cors from 'cors';
 import path from 'path';
 import dotenv from 'dotenv';
 
+// Mongoose Init
+import './db/init.js';
+
 // GQL
 import { resolvers } from './gql/resolvers.js';
 import { typeDefs } from './gql/typeDefs.js';
-
 
 // Load config
 const envpath: string = path.resolve(process.cwd(), '.env');
